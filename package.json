@@ -1,0 +1,13 @@
+{
+  "name": "neon-selection",
+  "main": "./lib/neon-selection",
+  "version": "0.0.1",
+  "description": "Glowing selection style, inspired by Enligntenment's Terminology",
+  "repository": "https://github.com/muchweb/atom-neon-selection",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+  }
+}
