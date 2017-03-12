@@ -1,20 +1,27 @@
-@import "ui-variables";
+// @import "ui-variables"; // Is not used
 
 @-webkit-keyframes neon-selection {
     0% {
         box-shadow: 0 0 3px 0px rgb(16, 177, 241), 0 0 3px 0px rgb(16, 177, 241) inset;
+        box-shadow: 0 0 3px 0px rgb(16, 177, 0), 0 0 3px 0px rgb(16, 177, 241) inset;
     }
     100% {
         box-shadow: 0 0 4px 0px rgb(75, 213, 255), 0 0 4px 0px rgb(75, 213, 255) inset;
+        box-shadow: 0 0 4px 0px rgb(75, 213, 0), 0 0 4px 0px rgb(75, 213, 255) inset;
     }
 }
 
-.editor .selection .region,
-atom-text-editor .selection .region,
-:host .selection .region {
-    border: 1px solid rgb(97, 210, 255);
-    background: rgba(70, 203, 255, .1) !important;
-    box-shadow: 0 0 4px 0px rgb(75, 213, 255), 0 0 4px 0px rgb(75, 213, 255) inset;
-    -webkit-animation: neon-selection 0.1s linear infinite;
-    opacity: 1 !important;
+.editor .selection,
+atom-text-editor .selection,
+syntax-- .selection {
+    .region {
+        border: 1px solid rgb(97, 210, 255);
+        background: rgba(70, 203, 255, .1) !important;
+        box-shadow: 0 0 4px 0px rgb(75, 213, 255), 0 0 4px 0px rgb(75, 213, 255) inset;
+        opacity: 1 !important;
+    }
+    &.selection-flicker .region {
+        -webkit-animation: neon-selection 0.1s linear infinite;
+    }
 }
+
