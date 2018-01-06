@@ -11,17 +11,14 @@
     }
 }
 
-.editor .selection,
-atom-text-editor .selection,
-syntax-- .selection {
-    .region {
-        border: 1px solid rgb(97, 210, 255);
-        background: rgba(70, 203, 255, .1) !important;
-        box-shadow: 0 0 4px 0px rgb(75, 213, 255), 0 0 4px 0px rgb(75, 213, 255) inset;
-        opacity: 1 !important;
-    }
-    &.selection-flicker .region {
-        -webkit-animation: neon-selection 0.1s linear infinite;
-    }
+.editor .selection .region,
+atom-text-editor .selection .region,
+atom-text-editor .selection .region {
+    border: 1px solid rgb(97, 210, 255);
+    background: rgba(70, 203, 255, .1) !important;
+    box-shadow: 0 0 4px 0px rgb(75, 213, 255), 0 0 4px 0px rgb(75, 213, 255) inset;
+    -webkit-animation: neon-selection 0.1s linear infinite;
+    opacity: 1 !important;
 }
+
 
